@@ -1,0 +1,37 @@
+Las variables en batch funcionan asi...
+
+- Definir una variable
+    set variable=contenido
+  - Si quieres que el usuario la defina escribe
+    set /p variable=contenido
+
+- Usa una variable
+  Para usar una variable debes poner el nombre de la variable entre simbolos de %.
+  EJ: echo %variable%
+
+- Variable predefinidas
+%CD%                     -> Directorio actual
+%DATE%                   -> Fecha actual del sistema
+%TIME%                   -> Hora actual del sistema
+%RANDOM%                 -> Número aleatorio entre 0 y 32767
+%ERRORLEVEL%             -> Último código de salida ejecutado (0 = éxito)
+%CMDEXTVERSION%          -> Versión de las extensiones del CMD
+%COMSPEC%                -> Ruta del ejecutable del intérprete de comandos (cmd.exe)
+%PROCESSOR_IDENTIFIER%   -> Identificador del procesador
+%PROCESSOR_ARCHITECTURE% -> Arquitectura del procesador (x86, AMD64, etc.)
+%NUMBER_OF_PROCESSORS%   -> Número de núcleos del CPU
+%USERNAME%               -> Nombre del usuario actual
+%USERDOMAIN%             -> Dominio del usuario o nombre del equipo
+%USERPROFILE%            -> Ruta del perfil del usuario (ej. C:\Users\Iron)
+%HOMEDRIVE%              -> Unidad donde se encuentra el perfil (ej. C:)
+%HOMEPATH%               -> Ruta relativa al perfil (ej. \Users\Iron)
+%APPDATA%                -> Carpeta de datos de aplicaciones (Roaming)
+%LOCALAPPDATA%           -> Carpeta de datos de aplicaciones locales
+%TEMP% o %TMP%           -> Carpeta temporal del sistema
+%SYSTEMROOT%             -> Carpeta del sistema operativo (C:\Windows)
+%WINDIR%                 -> Alias de %SYSTEMROOT%
+%PATH%                   -> Lista de rutas donde el sistema busca ejecutables
+%0                       -> Nombre o ruta del script actual
+%1 a %9                  -> Parámetros pasados al script (por posición)
+%*                       -> Todos los parámetros juntos
+%%A ... %%Z              -> Variables usadas en bucles FOR (ej. for %%A in (*) do echo %%A)
